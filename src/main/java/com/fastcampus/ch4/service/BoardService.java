@@ -1,11 +1,16 @@
 package com.fastcampus.ch4.service;
 
 import com.fastcampus.ch4.domain.BoardDto;
+import com.fastcampus.ch4.domain.SearchCondition;
 
 import java.util.List;
 import java.util.Map;
 
 public interface BoardService {
+    List<BoardDto> getSearchResultPage(SearchCondition searchCondition) throws Exception;
+
+    int getSearchResultCount(SearchCondition searchCondition) throws Exception;
+
     int getCount() throws Exception;
 
     int remove(Integer bno, String writer) throws Exception;
