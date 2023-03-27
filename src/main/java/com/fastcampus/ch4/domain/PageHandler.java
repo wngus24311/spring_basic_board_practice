@@ -1,7 +1,5 @@
 package com.fastcampus.ch4.domain;
 
-import org.springframework.web.util.UriComponentsBuilder;
-
 public class PageHandler {
     private int totalCnt;   // 총 게시물 갯수
 //    private int pageSize;   // 한 페이지의 크기
