@@ -15,7 +15,7 @@
 <!--		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
 <!--		<property name="url" value="jdbc:mysql://localhost:3306/lyra?useUnicode=true&amp;characterEncoding=utf8"/>-->
 		<property name="username" value="root"/>
-		<property name="password" value="Pp10293847!"/>
+		<property name="password" value="메롱"/>
 	</bean>
 
 <!--	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
