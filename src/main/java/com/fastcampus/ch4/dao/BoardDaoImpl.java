@@ -12,8 +12,12 @@ import java.util.Map;
 
 @Repository
 public class BoardDaoImpl implements BoardDao {
+    SqlSession session;
+
     @Autowired
-    private SqlSession session;
+    public BoardDaoImpl(SqlSession session) {
+        this.session = session;
+    }
     private static String namespace = "com.fastcampus.ch4.dao.BoardMapper.";
 
     @Override

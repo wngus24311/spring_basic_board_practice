@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-@Controller
+@RestController
 @ResponseBody
 public class CommentController {
 
@@ -26,10 +26,10 @@ public class CommentController {
         try {
             list = service.getList(bno);
             System.out.println("list = " + list);
-            return new ResponseEntity<List<CommentDto>>(list,HttpStatus.OK);    // 200
+            return new ResponseEntity<>(list, HttpStatus.OK);    // 200
         } catch (Exception e) {
             e.printStackTrace();
-            return new ResponseEntity<List<CommentDto>>(list,HttpStatus.BAD_REQUEST);   // 400
+            return new ResponseEntity<>(list, HttpStatus.BAD_REQUEST);   // 400
         }
     }
 
