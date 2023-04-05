@@ -99,6 +99,7 @@
         </c:if>
         <c:if test="${mode ne 'new'}">
             <button type="button" id="writeNewBtn" class="btn btn-write"><i class="fa fa-pencil"></i> 글쓰기</button>
+            <button type="button" id="commentBtn" class="btn btn-comment"><i class="fa fa-edit"></i> 댓글</button>
         </c:if>
         <c:if test="${boardDto.writer eq loginId}">
             <button type="button" id="modifyBtn" class="btn btn-modify"><i class="fa fa-edit"></i> 수정</button>
@@ -136,6 +137,19 @@
 
             if(formCheck())
                 form.submit();
+        });
+
+        $("#commentBtn").on("click", function(){
+            let form = $("#form");
+
+            $.ajax({
+                type:'GET',       // 요청 메서드
+                url: '/ch4/comments?bno='+bno,  // 요청 URI
+                success : function(result){
+                    <%--location.href = "<c:url value="comment.jsp">"--%>
+                },
+                error   : function(){ alert("error") } // 에러가 발생했을 때, 호출될 함수
+            }); // $.ajax()
         });
 
         $("#modifyBtn").on("click", function(){
